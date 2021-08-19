@@ -1,0 +1,677 @@
+/* Key Frames */
+@keyframes text_reveal_box{
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal {
+    100% {
+        color: white;
+    }
+}
+
+@keyframes text_reveal_name {
+    100% {
+        color: crimson;
+        font-weight: 500px;
+    }
+}
+/* End Key Frames */
+
+/* Google Fonts Importing */
+@import url('https://fonts.googleapis.com/css2?family=B612:wght@400;700&family=IBM+Plex+Sans:wght@100;300;400;500;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Mulish:wght@300;400;500;700;900&display=swap');
+
+/* Universal Document Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* HTML Styling */
+html {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Universal Anchor Tag Styling */
+a {
+    text-decoration: none;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Hero Section Styling */
+#hero {
+    background-image: url(../img/back1-medium.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+#hero .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+#hero h1 {
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1s;
+}
+
+#hero h1:nth-child(1) {
+    animation-delay: 1s;
+}
+
+#hero h1:nth-child(2) {
+    animation-delay: 2s;
+}
+
+#hero h1:nth-child(3) {
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 3s;
+}
+
+#hero h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: crimson;
+    animation: text_reveal_box 1s ease;
+    animation-delay: .5s;
+}
+
+#hero h1:nth-child(1) span {
+    animation-delay: .5s;
+}
+
+#hero h1:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+
+#hero h1:nth-child(3) span {
+    animation-delay: 2.5s;
+}
+
+#hero .cta {
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 25px;
+    transition: 0.3s ease background-color;
+    transition-property: background-color, color;
+}
+
+#hero .cta:hover {
+    color: white;
+    background-color: crimson;
+}
+/* End Hero Section Styling */
+
+/* Education Section Styling */
+#education {
+
+}
+
+#education .education {
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#education .section-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+#education .section-title span {
+    color: crimson;
+}
+
+#education .education-top p {
+    font-size: 1.6rem;
+    margin-top: 10px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+}
+
+#education .education-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 50px;
+}
+
+#education .education-item {
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url(../img/edu.jfif);
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#education .education-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+#education .education-bottom .icon {
+    height: 70px;
+    width: 70px;
+    margin-bottom: 20px;
+}
+
+#education .education-bottom .icon img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#education .education-item h2 {
+    font-size: 2.5rem;
+    color: white;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+#education .education-item p {
+    color: white;
+    text-align: left;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    margin-top: 2rem;
+}
+/* End Education Section Styling */
+
+/* Certification Section Styling */
+#certifications .section-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+#certifications .section-title span {
+    color: crimson;
+}
+
+#certifications .certifications {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#certifications .certifications-header h1 {
+    margin-bottom: 50px;
+}
+
+#certifications .all-certifications {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#certifications .certifications-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#certifications .certifications-info {
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    color: white;
+}
+
+#certifications .certifications-info h1 {
+    font-size: 4rem;
+}
+
+#certifications .certifications-info h2 {
+    font-size: 2.5rem;
+    margin-top: 0.75rem;
+    letter-spacing: 0.05rem;
+}
+
+#certifications .certifications-info p {
+    font-size: 2rem;
+    margin: 1rem 1rem 0rem 0rem;
+    letter-spacing: 0.1rem;
+}
+
+#certifications .certifications-img {
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+#certifications .certifications-img::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: 0.4;
+}
+
+#certifications .certifications-img img {
+    transition: 0.5s ease transform;
+}
+
+#certifications .certifications-items:hover .certifications-img img {
+    transform: scale(1.1);
+}
+
+#certifications .certifications-info a {
+    text-decoration: none;
+    color: white;
+}
+
+#certifications .certifications-info a:hover {
+    color: crimson;
+}
+
+#certifications .certifications-info a:visited {
+    color: crimson;
+}
+/* End Certification Section Styling */
+
+/* About Section Styling */
+#about .col-right .section-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+#about .section-title span {
+    color: crimson;
+}
+
+#about .about {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#about .col-right h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: underline dotted;
+    margin: 20px;
+}
+
+#about .col-right p {
+    font-size: 1.7rem;
+    text-align: center;
+    margin: 20px;
+}
+
+#about .col-right {
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+}
+
+#about .col-left {
+    width: 300px;
+    height: 400px;
+}
+
+#about .col-right a {
+    display: inline-block;
+    padding: 10px 30px;
+    color: crimson;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 25px;
+    transition: 0.3s ease background-color;
+    transition-property: background-color, color;
+}
+
+#about .col-right a:hover {
+    color: white;
+    background-color: crimson;
+}
+
+#about .col-left .about-img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin-top: 30px;
+    border: 10px solid white;
+}
+
+#about .col-left .about-img::after {
+    content: '';
+    position: absolute;
+    left: -33px;
+    top: 19px;
+    height: 98%;
+    width: 98%;
+    border: 7px solid crimson;
+    z-index: -1;
+}
+/* End About Section Styling */
+
+/* Contact Section */
+#contact .contact {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#contact .contact-items {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact .contact-item {
+    width: 70%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px #000;
+    flex-direction: column;
+}
+
+#contact .contact-item:hover {
+    box-shadow: 0px 0px 5px 0px #000;
+}
+
+#contact .icon {
+    width: 70px;
+    margin-bottom: 20px;
+}
+
+#contact .contact .section-title h1 {
+    font-size: 4rem;
+    font-weight: 200;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+#contact .contact .section-title h1 span {
+    color: crimson;
+}
+
+#contact .contact .contact-items .contact-item .contact-info h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+#contact .contact .contact-items .contact-item .contact-info h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 10px 0px 10px 0px;
+}
+/* End Contact Section */
+
+/* Footer Styling */
+#footer {
+    background-image: linear-gradient(60deg, #29323c, #485563 100%);
+}
+
+#footer .footer {
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+#footer .footer .brand h1 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 1000px;
+}
+
+#footer .footer .brand h1 span {
+    color: crimson;
+}
+
+#footer h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 1.7rem;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#footer .social-icon {
+    display: flex;
+    margin: 20px 0px 20px 0px;
+}
+
+#footer .social-item {
+    width: 70px;
+    height: 70px;
+}
+
+#footer .social-item img {
+    filter: grayscale(1);
+}
+
+#footer .social-item img:hover {
+    filter: grayscale(0);
+}
+
+#footer p {
+    color: white;
+    font-size: 1rem;
+}
+/* End Footer Styling */
+
+/* Media Query For Tablet */
+@media only screen and (min-width:768px){
+    .cta{
+        font-size: 2.5rem;
+        padding: 20px 60px;
+    }
+    h1.section-title {
+        font-size: 6rem;
+    }
+    /* Hero */
+    #hero h1 {
+        font-size: 7rem;
+    }
+    /* End Hero */
+    /* Education */
+    #education .education-bottom .education-item {
+        flex-basis: 30%;
+        margin: 1%;
+    }
+    /* End Education */
+    /* Certifications */
+    #certifications .certifications-items {
+        flex-direction: row;
+    }
+    #certifications .certifications-items:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+    #certifications .certifications-items {
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    #certifications .all-certifications .certifications-info {
+        height: 100%;
+    }
+    #certifications .all-certifications .certifications-img {
+        height: 100%;
+    }
+    /* End Certifications */
+    /* About */
+    #about .about {
+        flex-direction: row-reverse;
+    }
+    #about .col-left {
+        width: 550px;
+        height: 400px;
+        padding-left: 60px;
+    }
+    #about .about .col-left .about-img::after {
+        left: -45px;
+        top: 34px;
+        height: 98%;
+        width: 98%;
+        border: 10px solid crimson;
+
+    }
+    #about .col-right {
+        text-align: left;
+        padding: 30px;
+    }
+    #about .col-right h1 {
+        text-align: left;
+    }
+    /* End About */
+    /* Contact */
+    #contact .contact {
+        flex-direction: column;
+        padding: 100px 0;
+        align-items: center;
+        justify-content: center;
+        min-width: 20vh;
+    }
+
+    #contact .contact-items {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        margin: 0;
+    }
+    #contact .contact-item {
+        margin: 20px;
+        flex-direction: row;
+        display: flex;
+    }
+    #contact .contact-item .icon {
+        width: 80px;
+        height: 80px;
+    }
+    #contact .contact-item .icon img {
+        object-fit: contain;
+    }
+    #contact .contact-item .contact-info {
+        width: 50%;
+        text-align: left;
+        padding-left: 20px;
+    }
+    /* End Contact */
+}
+/* End Media Query For Tablet */
